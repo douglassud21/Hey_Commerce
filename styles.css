@@ -1,0 +1,287 @@
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --fogo-vulcanico: #FF504E;
+    --por-do-sol-radiante: #FF7A33;
+    --chama-dourada: #FE9B1E;
+    --mar-profundo: #0D3ED8;
+    --onda-celeste: #0F63CB;
+}
+
+/* Header */
+.header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12121218;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.header .logo {
+    margin-left: 2rem;
+}
+.header .logo img {
+    width: 7rem;
+}
+.header nav {
+    display: flex;
+    gap: 3rem;
+}
+.header nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Efeitos da Nav */
+#navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* Espaço entre os links */
+    padding: 20px;
+    position: relative;
+    /* Necessário para o posicionamento do pseudo-elemento */
+}
+
+#navbar a {
+    padding: 1rem;
+    text-decoration: none;
+    color: rgba(32, 32, 32, 0.7);
+    /* Cor inicial do texto */
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover com mudança de cor e underline animado */
+#navbar a:hover {
+    color: var(--por-do-sol-radiante);
+    /* Cor vibrante ao passar o mouse (laranja) */
+}
+
+/* Animação do underline */
+#navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    /* Posiciona a linha abaixo do link */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--por-do-sol-radiante);
+    /* Cor do underline */
+    transition: width 0.3s ease;
+}
+
+/* Efeito de expansão do underline no hover */
+#navbar a:hover::after {
+    width: 100%;
+    /* O underline se expande completamente */
+}
+
+/* Efeito de clique nos links */
+#navbar a:active {
+    transform: scale(0.95);
+    /* Efeito de compressão ao clicar */
+    color: #ffc107;
+    /* Muda para cor amarela no clique */
+    transition: transform 0.1s ease-out;
+}
+
+/* Botão de informações */
+.header .info {
+    margin-right: 2rem;
+    font-size: 1.2rem;
+
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+.header .info a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.39);
+    /* Cor inicial do texto */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transições suaves */
+}
+/* Animação de hover para o texto */
+.header .info a:hover {
+    color: #ff5733;
+    /* Altera para cor vibrante (laranja) no hover */
+    background: linear-gradient(45deg, #FF504E, #0F63CB);
+    /* Gradiente de fundo */
+    -webkit-background-clip: text;
+    /* Aplica o gradiente apenas ao texto */
+    color: transparent;
+    /* Torna o texto transparente para mostrar o gradiente */
+    transform: scale(1.1);
+    /* Dá um leve zoom ao passar o mouse */
+}
+/* Efeito de animação ao clicar no link */
+.header .info a:active {
+    transform: scale(0.95);
+    /* Efeito de compressão no clique */
+    color: #ffc107;
+    /* Muda para cor amarela */
+    transition: transform 0.1s ease-out;
+    /* Efeito rápido no clique */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    height: 50vh;
+    width: 100vw;
+    background-color: #FE9B1E;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.option {
+    flex: 1;
+    /* Divide o espaço igualmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que as imagens preencham o espaço */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    height: 300vh;
+}
+.loja {
+    height: 100vh;
+    background-color: #FF504E;
+}
+.atacado {
+    height: 100vh;
+    background-color: #0D3ED8;
+}
+.dropshipping {
+    height: 100vh;
+    background-color: #ffc107;
+}
+
+
+
+
+
+
+
+
+
+.sidebar {
+    height: 20vh;
+    background-color: aqua;
+}
+
+.footer {
+    height: 80vh;
+    background-color: black;
+}

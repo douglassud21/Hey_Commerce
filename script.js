@@ -1,3 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Animação inicial para o botão
 gsap.from("#info", { 
   x: 1000, // Começa fora da tela, à direita
@@ -316,4 +345,40 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleActions: "play reverse play reverse",
     },
   });
+});
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".footer",
+    {
+      opacity: 0,
+      y: 150,
+      rotateX: 15,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".footer",
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      duration: 1.8,
+      ease: "elastic.out(1, 0.5)",
+      onComplete: () => gsap.to(".footer", { opacity: 1 }),
+    }
+  );
 });
